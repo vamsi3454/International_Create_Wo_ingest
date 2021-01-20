@@ -1,0 +1,221 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ComparedTwoImages" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="SwaggerOutput" Type="InOutArgument(ui:Image)" />
+    <x:Property Name="ExpectedImage" Type="InArgument(x:String)" />
+    <x:Property Name="SgaggerImageFound" Type="InOutArgument(x:Boolean)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>989,1856</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Orchestrator.Client</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.POP3.Activities</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="969,2069" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:GenericValue" Name="Validation1" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LoadImage DisplayName="Load Image" FileName=".screenshots\fb0c0a3623d5198bb647517046d1ab99.png" sap:VirtualizedContainerService.HintSize="927,51" sap2010:WorkflowViewState.IdRef="LoadImage_1" Image="[SwaggerOutput]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LoadImage>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="927,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="WaitForElementAndGetText.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'chrome.exe Chrome'" sap:VirtualizedContainerService.HintSize="927,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="a2a9b1ca24f9c636f9a2d1173381c10f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Swagger UI - Google Chrome' /&gt;&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:ImageFound DisplayName="Image Exists 'DIV  header'" Found="[SgaggerImageFound]" sap:VirtualizedContainerService.HintSize="927,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+      <ui:ImageFound.Image>
+        <ui:ImageTarget Image="{x:Null}" Accuracy="0.7" TargetImageBase64="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" />
+      </ui:ImageFound.Image>
+      <ui:ImageFound.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Swagger UI - Google Chrome' /&gt;&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+      </ui:ImageFound.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:ImageFound>
+    <While sap:VirtualizedContainerService.HintSize="927,1467" sap2010:WorkflowViewState.IdRef="While_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <While.Condition>[SgaggerImageFound&lt;&gt;True]</While.Condition>
+      <Sequence sap:VirtualizedContainerService.HintSize="881,1309" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="839,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;waiting to load the swagger image&quot;]" />
+        <Sequence sap:VirtualizedContainerService.HintSize="839,1086" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence sap:VirtualizedContainerService.HintSize="797,453" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="ui:GenericValue" Name="Compared_Result" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ImageFound DisplayName="Image Exists 'DIV  header'" Found="[SgaggerImageFound]" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="ImageFound_3">
+              <ui:ImageFound.Image>
+                <ui:ImageTarget TargetImageBase64="{x:Null}" Accuracy="0.8" Image="[SwaggerOutput]" />
+              </ui:ImageFound.Image>
+              <ui:ImageFound.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;html app='chrome.exe' title='Swagger UI' /&gt;&lt;webctrl id='header' tag='DIV' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+              </ui:ImageFound.Target>
+            </ui:ImageFound>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;checking for image status swagger&quot;]" />
+            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+            <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="ui:GenericValue">[Compared_Result]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="ui:GenericValue">[false]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+          <If Condition="[SwaggerOutput.Equals(false)]" sap:VirtualizedContainerService.HintSize="797,501" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="376,353" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Image not found for swagger&quot;]" />
+                <ui:ImageFound DisplayName="Image Exists 'DIV  header'" Found="[SgaggerImageFound]" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+                  <ui:ImageFound.Image>
+                    <ui:ImageTarget TargetImageBase64="{x:Null}" Accuracy="0.8" Image="[SwaggerOutput]" />
+                  </ui:ImageFound.Image>
+                  <ui:ImageFound.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="&lt;webctrl id='header' tag='DIV' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                  </ui:ImageFound.Target>
+                </ui:ImageFound>
+              </Sequence>
+            </If.Then>
+            <If.Else>
+              <Sequence sap:VirtualizedContainerService.HintSize="376,283" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Image found for swagger&quot;]" />
+                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[Validation1]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="ui:GenericValue">[false]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </If.Else>
+          </If>
+        </Sequence>
+      </Sequence>
+    </While>
+  </Sequence>
+</Activity>
